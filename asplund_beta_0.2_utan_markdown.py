@@ -114,9 +114,7 @@ plt.xlabel("Ålder")
 plt.grid(True, zorder=0)
 plt.show()
 
-# Fördelning av medaljtyper (denna är helt meningslös då den är
-# på totalen, så det borde bli lika många i alla tre kolumner om
-# inte någon blivit fråntagen sin medalj på grund av till exempel dopning)
+# Fördelning av medaljtyper
 medals['Medal'].value_counts().plot(kind='bar', zorder=3)
 plt.title("Fördelning av medaljtyper")
 plt.ylabel("Antal")
@@ -381,4 +379,5 @@ plt.xlabel("År")
 plt.ylabel("Medelålder")
 plt.xticks(ticks=medals_per_year_sport.index, rotation=75)
 plt.grid(True, zorder=0)
+
 plt.show()
