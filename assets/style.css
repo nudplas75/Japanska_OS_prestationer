@@ -13,8 +13,8 @@
 
 .controls {
     width: 100%;
-    max-width: 70%;   /* samma procent som grafens max-bredd på mockupen */
-    margin: 0 auto;   /* centrera */
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 
@@ -40,3 +40,4 @@
     font-weight: 600;
     text-align: center;
 }
+
