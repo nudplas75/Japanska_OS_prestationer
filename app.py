@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 from PIL import Image
 
+# Jag har testat kod, bett om hjälp med det mesta på olika vis men alltid sett till att jag skriver in koden även när jag bett tex en AI förklara vad som är fel med det jag har skrivit.
+
 # Mindre text så det passar med mockupbilden
 mpl.rcParams.update({
     "font.size": 8,
@@ -80,6 +82,7 @@ jpn_js_medals = df_js_medals[df_js_medals["NOC"] == "JPN"].copy()
 jpn_js = df_js[df_js["NOC"] == "JPN"].copy()
 
 # Lägga diagram på bildmockup
+# Detta hade jag problem med att förstå hur det fungerade så har har jag tagit hjält av forum, ChatGPT och vänner.
 
 def plot_japan_medals_by_sport_top10():
     """Japan: Flest medaljer per sport (Top 10)"""
@@ -273,6 +276,8 @@ def plot_judo_taekwondo_age_distribution():
 
 
 # Bildhanteringen
+# Även här har jag tagit hjälp för att få det att fungera, placering bland annat
+
 def fig_to_png_rgba(fig) -> Image.Image:
     buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=150, transparent=True)
@@ -312,7 +317,8 @@ def compose_on_mockup(chart_img: Image.Image) -> str:
     return f"data:image/png;base64,{encoded}"
 
 
-# -- DASH-APP -- #
+# Dashappen
+# Först fick jag ta hjälp men sen hittade jag en förklaring som gjorde att jag hjälpligt förstod hur det fungerar
 
 app = dash.Dash(__name__)
 
